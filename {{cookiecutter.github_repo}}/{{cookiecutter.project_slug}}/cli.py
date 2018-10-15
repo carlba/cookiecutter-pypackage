@@ -2,7 +2,9 @@
 """Console script for {{cookiecutter.project_slug}}."""
 import click
 
-import .{{ cookiecutter.project_slug }}
+from . import
+
+{{cookiecutter.project_slug}}
 
 @click.command()
 def main(args=None):
