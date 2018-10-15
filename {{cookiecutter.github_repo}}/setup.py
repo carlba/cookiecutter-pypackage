@@ -9,5 +9,9 @@ setup(name="{{ cookiecutter.project_slug }}",
       author="{{ cookiecutter.github_user }}",
       packages=find_packages(),
       install_requires=['click'],
-      entry_points={'console_scripts': ['cookiecutter.project_slug = cookiecutter.project_slug.cli:main']}
-)
+      entry_points={
+          'console_scripts': [
+              'cookiecutter.project_slug = cookiecutter.project_slug.cli:main'
+          ]
+      }
+      )
