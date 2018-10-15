@@ -1,2 +1,12 @@
 # Jetbrains Products
 .idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# vi/vim
+*.*~
+
+# MacOS
+.DS_Store
