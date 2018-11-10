@@ -1,8 +1,16 @@
 # -*- coding: utf-8 -*-
 """Console script for {{cookiecutter.project_slug}}."""
+import sys
+
 import click
+from click.testing import CliRunner
 
 from . import {{cookiecutter.project_slug}}
+
+
+def is_debugging():
+    return not (sys.gettrace() is None)
+
 
 @click.command()
 def main(args=None):
@@ -14,4 +22,8 @@ def main(args=None):
 
 
 if __name__ == "__main__":
-    main()
+    if is_debugging():
+        runner = CliRunner()
+        runner.invoke(reload)
+    else:
+        main()
