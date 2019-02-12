@@ -17,3 +17,4 @@ dist/
 venv/
 pypkg/
 nosetests.xml
+*.egg-info/
