@@ -24,6 +24,6 @@ def main(args=None):
 if __name__ == "__main__":
     if is_debugging():
         runner = CliRunner()
-        runner.invoke(reload)
+        runner.invoke(main)
     else:
         main()
