@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Console script for {{cookiecutter.project_slug}}."""
+"""Console script for {{cookiecutter.project_slug}}"""
 import sys
 
 import click
 from click.testing import CliRunner
 
-from . import {{cookiecutter.project_slug}}
+from . import core
 
 
 def is_debugging():
