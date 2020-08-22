@@ -4,8 +4,12 @@ from click.testing import CliRunner
 from {{cookiecutter.project_slug}}.cli import main
 
 
-def test_main_returns_correct_output():
+def test_start_returns_correct_output():
     runner = CliRunner()
-    result = runner.invoke(main)
-    assert ('Replace this message by putting '
-            'your code into flask_scenegen.cli.main') in result.output
+    result = runner.invoke(start)
+    assert 'Starting' in result.output
+
+def test_stop_returns_correct_output():
+    runner = CliRunner()
+    result = runner.invoke(start)
+    assert 'Stoppping' in result.output

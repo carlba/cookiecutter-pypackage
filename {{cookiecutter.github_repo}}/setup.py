@@ -11,7 +11,7 @@ setup(name="{{ cookiecutter.project_slug }}",
       install_requires=['click'],
       entry_points={
           'console_scripts': [
-              '{{ cookiecutter.project_slug }} = {{ cookiecutter.project_slug }}.cli:main'
+              '{{ cookiecutter.project_slug }} = {{ cookiecutter.project_slug }}.cli:cli'
           ]
       }
       )

@@ -12,13 +12,19 @@ def is_debugging():
     return not (sys.gettrace() is None)
 
 
-@click.command()
-def main(args=None):
-    """Console script for {{cookiecutter.project_slug}}."""
-    click.echo("Replace this message by putting your code into "
-               "{{cookiecutter.project_slug}}.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
-    return 0
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+def start():
+    core.start()
+
+
+@cli.command()
+def stop():
+    core.stop()
 
 
 if __name__ == "__main__":
@@ -26,4 +32,4 @@ if __name__ == "__main__":
         runner = CliRunner()
         runner.invoke(main)
     else:
-        main()
+        cli()
